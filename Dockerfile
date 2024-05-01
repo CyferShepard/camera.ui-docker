@@ -4,7 +4,7 @@ ARG UID="948"
 ARG GID="948"
 
 RUN apk add --no-cache ca-certificates tini python3 make gcc g++ \
- && npm install -g camera.ui.cyershepard@latest \
+ && npm install -g camera.ui.cyfershepard@latest \
  && apk del make gcc g++ \
  && addgroup -g "${GID}" app \
  && adduser -u "${UID}" -G app -D -h /app app
@@ -13,4 +13,4 @@ USER app
 WORKDIR /app
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["camera.ui.cyfershepard"]
+CMD ["camera.ui"]
