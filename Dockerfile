@@ -13,4 +13,4 @@ USER app
 WORKDIR /app
 
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["camera.ui"]
+CMD ["camera.ui.cyfershepard"]
